@@ -1,6 +1,31 @@
-# Getting Started with Create React App
+# Sign Language Translator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
+
+The application is a Single Page Application which works as a sign language translator that translates written language into the american sign language.  
+To use you have to setup a login profile by username and then be directed to 
+
+## Installation
+
+To clone this repository to your machine run the following command:
+
+```bash
+git clone https://github.com/Vendelaosterman/sign-language-translator.git
+```
+
+To install the required packages from NPM run the following commands in the project root folder:
+
+```bash
+npm install
+npm install react-hook-form
+```
+### To be able to fetch data from an external API you have to install following:
+Download git by steps:  
+1. Install [Git](https://git-scm.com/) 
+2. Install [NodeJS LTS](https://nodejs.org/en/) with npm **(It must be the LTS version.)**
+3. Create a [Railway](https://www.railway.app/) account (free 500 hours p/m)
+
+Kankse bättre att bara länka till API beskrivning
 
 ## Available Scripts
 
@@ -68,3 +93,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Contributing
+
+@levenfalk  
+@VendelaOsterman  
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
