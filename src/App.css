@@ -1,1 +1,162 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&display=swap');
 
+:root{
+    --primary-color: #ffc760;
+}
+
+html{
+    background: linear-gradient(to bottom, #8a60ff, #f8dc95);
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
+    font-size: 2.5rem;
+    padding-left: 30rem;
+    height: 8vh;
+    padding-top: 40px;
+    color: white;
+}
+
+
+.slogan{
+    font-family: 'Lilita One', cursive;
+    margin: auto;
+    letter-spacing: 1px;
+}
+
+.loginPage{
+    width: 50%;
+    display: flex;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
+    margin: 20vh auto;
+    background-color: white;
+}
+
+.loginPage .wr{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.login-wr{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 70%;
+}
+
+.icon-wr{
+    background-color: var(--primary-color);
+    height: 100%;
+}
+
+.icon-wr img{
+    margin-left: 2rem;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+fieldset{
+    border: none;
+    padding: 0;
+}
+
+.loginForm input{
+    border: none;
+    border-bottom: 1.5px solid black;
+    width: 100%;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.loginForm input:focus{
+    outline: none;
+}
+
+.loginForm button{
+    border: none;
+    background-color: var(--primary-color);
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+.loginForm button:hover{
+    background-color: white;
+    border: 1px solid var(--primary-color);
+}
+
+.dot1 {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    position: absolute;
+    top: 80px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
+  }
+
+  .dot2 {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: absolute;
+    top: 80px;
+    left: 1000px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
+  }
+
+  .dot3 {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 1000px;
+    left: 600px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
+    animation-name: example;
+  animation-duration: 4s
+  }
+
+  .dot4 {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    position: absolute;
+    top: 900px;
+    left: 1500px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
+  }
+
+  .dot5 {
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 1500px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
+  }
+
+/*@keyframes example {
+  0%   {left:1000px; top:600px;}
+  25%  {left:1000px; top:0px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:0px; top:200px;}
+  100% {left:0px; top:0px;}
+}*/

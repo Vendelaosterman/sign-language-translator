@@ -43,17 +43,16 @@ const LoginForm = () => {
 
     return(
         <>
-            <h2>Whats your name?</h2>
-            <form onSubmit={ handleSubmit(onSubmit) }>
+            <p>Username</p>
+            <form class="loginForm" onSubmit={ handleSubmit(onSubmit) }>
                 <fieldset>
-                    <label htmlFor="username">Username: </label>
                     <input 
                     type="text"
                     placeholder="John Doe"
                     {...register("username", usernameConfig)}></input>
                 </fieldset>
                 { errorMessage }
-                <button type="submit" disabled = {loading}>Continue</button>
+                <button type="submit" disabled = {loading}>Sign in</button>
                 {loading && <p>Logging in...</p>}
             </form>
         </>
