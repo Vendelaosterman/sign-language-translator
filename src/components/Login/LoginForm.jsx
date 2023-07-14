@@ -23,7 +23,7 @@ const LoginForm = () => {
     // Side Effects
     useEffect(() => {
         if (user !== null) {
-            navigate('profile')
+            navigate('profile') // change to translator page
         }
     }, [ user, navigate ]) // If empty Deps - Only run 1ce
 
