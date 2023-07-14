@@ -5,6 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 The application is a Single Page Application which works as a sign language translator that translates written language into the american sign language.  
 To use you have to setup a login profile by username and then be directed to 
 
+## Sign language Images
+Icons made by [Freepik](https://www.freepik.com) from [www.flaticon.com] (https://www.flaticon.com/)
+
 ## Installation
 
 To clone this repository to your machine run the following command:
