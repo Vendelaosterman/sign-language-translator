@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { useUser } from "../../context/UserContext"
+import withAuth from "../../hoc/withAuth"
 
 const Navbar = () => {
 
@@ -21,4 +22,4 @@ const { user } = useUser()
     )
 }
 
-export default Navbar
+export default withAuth(Navbar)
