@@ -4,6 +4,7 @@ import { loginUser } from '../../api/user';
 import { storageSave } from '../../utils/storage';
 import { useNavigate } from "react-router-dom";
 import  { useUser } from "../../context/UserContext";
+import { STORAGE_KEY_USER } from '../../const/storageKeys';
 
 const usernameConfig = {
     required: true,
@@ -22,7 +23,7 @@ const LoginForm = () => {
     // Side Effects
     useEffect(() => {
         if (user !== null) {
-            navigate('/profile')
+            navigate('profile')
         }
     }, [ user, navigate ]) // If empty Deps - Only run 1ce
 
@@ -34,7 +35,7 @@ const LoginForm = () => {
             setApiError(error)
         }
         if (userResponse !== null) {
-            storageSave('translator-user', userResponse)
+            storageSave(STORAGE_KEY_USER, userResponse)
             setUser(userResponse)
         }
         setLoading(false)
