@@ -28,7 +28,7 @@ const LoginForm = () => {
         }
 
         if(errors.username.type === 'minLength'){
-        <span>Username is too short (min 3)</span>
+            return <span>Username is too short (min 3)</span>
         }
     })()
 
