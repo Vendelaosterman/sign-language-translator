@@ -6,11 +6,12 @@
 }
 
 html{
-    background: linear-gradient(to bottom, #8a60ff, #f8dc95);
+    /*background: linear-gradient(to bottom, #8a60ff, #f8dc95);*/
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #8a60ff, #f8dc95);
 }
 
 header{
