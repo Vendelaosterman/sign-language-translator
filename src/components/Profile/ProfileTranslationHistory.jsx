@@ -7,8 +7,8 @@ const ProfileTranslationHistory = ({ translations }) => {
         )
 
     return (
-        <section>
-            <h4>Your Translation History</h4>
+        <section className="translation-history">
+            <h2>Your Translation History</h2>
             <ul>{ translationList }</ul>
         </section>
     )
