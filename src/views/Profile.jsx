@@ -8,11 +8,10 @@ const Profile = () => {
     const { user } = useUser()
 
     return (
-        <>
-            <h1>Profile</h1>
-            <ProfileActions/>
+        <div className="profile">
             <ProfileTranslationHistory translations={ user.translations }/>
-        </>
+            <ProfileActions/>
+        </div>
     )
 }
 

@@ -7,6 +7,7 @@
 
 html{
     background: linear-gradient(to bottom, #8a60ff, #f8dc95);
+    min-height: 100%;
 }
 
 body{
@@ -20,13 +21,53 @@ header{
     height: 8vh;
     padding-top: 40px;
     color: white;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
+header.login-header{
+    padding-left: 0;
+    justify-content: center;
+}
 
 .slogan{
     font-family: 'Lilita One', cursive;
-    margin: auto;
+    /*margin: auto;*/
     letter-spacing: 1px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    margin-left: auto;
+    padding-left: 5rem;
+}
+
+.navbar ul{
+    list-style-type: none;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar a:hover, .active-page a{
+    color: white;
+}
+
+li.active-page a{
+    color: white;
+}
+
+button {
+    cursor: pointer;
 }
 
 .loginPage{
@@ -88,7 +129,7 @@ fieldset{
     outline: none;
 }
 
-.loginForm button{
+.loginForm button {
     border: none;
     background-color: var(--primary-color);
     height: 50px;
@@ -97,7 +138,7 @@ fieldset{
     font-weight: bold;
 }
 
-.loginForm button:hover{
+.loginForm button:hover {
     background-color: white;
     border: 1px solid var(--primary-color);
 }
@@ -160,3 +201,30 @@ fieldset{
   75%  {left:0px; top:200px;}
   100% {left:0px; top:0px;}
 }*/
+
+.profile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+ul.profile-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-actions li {
+    display: inline;
+    padding: 4rem;
+}
+
+.profile-actions button{
+    background-color: transparent;
+    border: 0;
+}
+
+section.translation-history{
+    display: flex;
+    justify-content: center;
+}

@@ -3,12 +3,12 @@ import LoginForm from "../components/Login/LoginForm"
 const Login = () =>{
 
     return (
-      <section class="loginPage">
-        <div class="icon-wr wr">
+      <section className="loginPage">
+        <div className="icon-wr wr">
           <img src={require("../components/images/sign-language.png")}></img>
         </div>
-        <div class="wr">
-          <div class="login-wr">
+        <div className="wr">
+          <div className="login-wr">
             <h1>Log in</h1>
             <LoginForm></LoginForm>
           </div>
