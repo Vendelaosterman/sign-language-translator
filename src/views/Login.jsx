@@ -3,6 +3,8 @@ import Header from "../components/Header"
 
 const Login = () =>{
 
+    document.body.style = "background: linear-gradient(to bottom, #8a60ff, #f8dc95)";
+
     return (
         <>
         <Header></Header>

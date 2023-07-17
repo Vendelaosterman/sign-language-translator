@@ -1,7 +1,7 @@
 
 const Translation = (props) => {
 
-        const receivedValue = props.toChild;
+        const receivedValue = props.userInput;
 
         const displayImages = receivedValue.map((value, index) => {
             value = value.toLowerCase()
