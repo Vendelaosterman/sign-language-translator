@@ -1,14 +1,13 @@
 import { createHeaders } from '../api/index'
 const apiUrl = process.env.REACT_APP_API_URL
 
-export const translationAdd = async (user, totalHistory) => {
+export const translationAdd = async (user, translation) => {
     try{
-        const response = await fetch(`${apiUrl}/${user.id}`, { //ändra något här eventuellt
+        const response = await fetch(`${apiUrl}/${user.id}`, {
             method: 'PATCH', 
             headers: createHeaders(), 
             body: JSON.stringify({
-                //username: user.username, 
-                translations: totalHistory
+                translations: [...user.translations, translation],
             })
         })
 
@@ -17,7 +16,7 @@ export const translationAdd = async (user, totalHistory) => {
         }
 
         const result = await response.json()
-        return [null, result]
+        return [ null, result ] 
     }
     catch (error){
         return [error.message, null]

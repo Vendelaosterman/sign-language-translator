@@ -1,7 +1,11 @@
+import { useLocation } from "react-router-dom";
 
 const Translation = (props) => {
+        const receivedValue = props.userInput
+        //console.log(props.userInput)
 
-        const receivedValue = props.userInput;
+        const currentPath = useLocation().pathname
+        //{(currentPath === "/profile") && <p>{value}</p>}
 
         const displayImages = receivedValue.map((value, index) => {
             value = value.toLowerCase()

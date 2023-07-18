@@ -4,44 +4,52 @@ import { useUser } from '../context/UserContext'
 import Translation from "../components/Translator/Translation"
 import { loginUser } from "../api/user"
 import  { translationAdd } from "../api/translation"
+import { STORAGE_KEY_USER } from "../const/storageKeys";
+import { storageSave } from "../utils/storage";
 
 const Translator = () =>{
 
-    const [userInput, setUserInput] = useState("");
-    const [inputList, setInputList] = useState("");
-    const [btnClicked, setBtnClicked] = useState(false);
-    const { user } = useUser();
+    const [userInput, setUserInput] = useState("")
+    const [inputList, setInputList] = useState("")
+    const [btnClicked, setBtnClicked] = useState(false)
+    const { user, setUser } = useUser()
 
     document.body.style = "background: white";
 
     const handleInputChange = (e) => {
-        setUserInput(e.target.value);
-
+        setUserInput(e.target.value)
     }
 
-    const handleButtonClick = (e) =>{
+    const handleTranslateClick = (e) =>{
        // send to child
         e.preventDefault()
-        setBtnClicked(true);
+        setBtnClicked(true)
         let list = userInput.split('')
         setInputList(list)
 
-        addTranslationToHistory();
-        
+        addTranslationToHistory()
     }
 
     const addTranslationToHistory = async() => {
 
         // fetch existing history 
-        const [error1, userResponse] = await loginUser(user.username)
+        //const [userError, userResponse] = await loginUser(user.username)
 
-        let totalHistory = userResponse.translations; 
-        totalHistory.push(userInput);
+        // let totalHistory = userResponse.translations; 
+        // totalHistory.push(userInput);
 
         // add new translation 
-        const [error2, result] = await translationAdd(user, totalHistory)
-        console.log(result);
+        const [error, updatedUser] = await translationAdd(user, userInput)
+        if (error !== null) {
+            return
+        }
 
+        // Keep UI state and Server state in sync
+        storageSave(STORAGE_KEY_USER, updatedUser)
+        // Update context state
+        setUser(updatedUser)
+
+        console.log(updatedUser)
     }
 
     return (
@@ -54,7 +62,7 @@ const Translator = () =>{
                     value={userInput}
                 ></input>
             </fieldset>
-            <button type="submit" onClick={handleButtonClick}>Translate</button>
+            <button type="submit" onClick={handleTranslateClick}>Translate</button>
 
         </form>
         {btnClicked && <Translation userInput = {inputList} />}
