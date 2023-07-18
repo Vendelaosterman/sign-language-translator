@@ -46,7 +46,7 @@ const Translator = () =>{
 
         // Keep UI state and Server state in sync
         storageSave(STORAGE_KEY_USER, updatedUser)
-        // Update context state
+        // Update context
         setUser(updatedUser)
 
         console.log(updatedUser)

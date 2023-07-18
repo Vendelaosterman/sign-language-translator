@@ -20,7 +20,7 @@ const Profile = () => {
             }
         }
 
-        //findUser() // need to invoke because of useEffect
+        findUser() // need to invoke because of useEffect
 
     }, [ setUser, user.id ])
 
