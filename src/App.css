@@ -3,18 +3,20 @@
 
 :root{
     --primary-color: #ffc760;
+    --secondary-color: #8a60ff;
 }
 
 html{
-    background: linear-gradient(to bottom, #8a60ff, #f8dc95);
     min-height: 100%;
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #8a60ff, #f8dc95);
 }
 
-header{
+
+.login-header {
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
     font-size: 2.5rem;
     padding-left: 30rem;
@@ -24,18 +26,37 @@ header{
     display: flex;
     align-items: center;
     white-space: nowrap;
-    background-color: #8a60ff;
 }
 
-header.login-header{
-    padding-left: 0;
-    justify-content: center;
+.default-header{
+    border-bottom: 2px solid rgba(206, 184, 250, 0.336);
+    background-color: #8a60ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 8rem;
+    height: 8vh;
 }
+
+.default-header a{
+    text-decoration: none;
+}
+
+
+/*--- NAV ---*/
 
 .slogan{
     font-family: 'Lilita One', cursive;
     /*margin: auto;*/
+    margin: 0;
+    color: white;
+}
+
+.default-slogan{
+    font-family: 'Lilita One', cursive;
     letter-spacing: 1px;
+    font-size: 2rem;
+    color: white;
 }
 
 .navbar {
@@ -59,13 +80,36 @@ header.login-header{
     text-decoration: none;
 }
 
-.navbar a:hover, .active-page a{
-    color: white;
+.default-header a:active, .default-header a:visited{
+    text-decoration: none;
 }
 
-li.active-page a{
-    color: white;
+.nav-user-wr{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
+
+.name-wr{
+    color: white;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+}
+
+.name-wr p{
+    margin: 0;
+}
+
+.nav-slogan-wr{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.default-header img{
+    width: 40px;
+}
+
 
 button {
     cursor: pointer;
@@ -144,65 +188,6 @@ fieldset{
     border: 1px solid var(--primary-color);
 }
 
-.dot1 {
-    height: 500px;
-    width: 500px;
-    border-radius: 50%;
-    position: absolute;
-    top: 80px;
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
-  }
-
-  .dot2 {
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    position: absolute;
-    top: 80px;
-    left: 1000px;
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
-  }
-
-  .dot3 {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    position: absolute;
-    top: 1000px;
-    left: 600px;
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
-    animation-name: example;
-  animation-duration: 4s
-  }
-
-  .dot4 {
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
-    position: absolute;
-    top: 900px;
-    left: 1500px;
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
-  }
-
-  .dot5 {
-    height: 450px;
-    width: 450px;
-    border-radius: 50%;
-    position: absolute;
-    top: 100px;
-    left: 1500px;
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
-  }
-
-/*@keyframes example {
-  0%   {left:1000px; top:600px;}
-  25%  {left:1000px; top:0px;}
-  50%  {left:200px; top:200px;}
-  75%  {left:0px; top:200px;}
-  100% {left:0px; top:0px;}
-}*/
-
 .profile {
     width: 100%;
     display: flex;
@@ -229,3 +214,94 @@ section.translation-history{
     display: flex;
     justify-content: center;
 }
+
+/*---Translation page--- */
+
+.translation-wr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.translation-wr form{
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    background-color: var(--secondary-color);
+    justify-content: center;
+    width: 100%;
+}
+
+.translation-wr fieldset{
+    border: 3px solid white;
+    background-color: rgb(226, 226, 226);
+    width: 50%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    padding: 0.2rem 0.2rem 0.2rem 1rem;
+    align-items: center;
+}
+
+.translation-wr input{
+    background-color: rgb(226, 226, 226);
+    width: 100%;
+    height: 30px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: black;
+
+}
+
+.translation-wr input:focus{
+    outline: none;
+}
+
+.translation-image-wr{
+    width: 70%;
+    margin-top: 3rem;
+}
+
+.translation-wr button{
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(226, 226, 226);
+}
+
+.img-wr{
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 2rem;
+    min-height: 30vh;
+}
+
+.img-wr img{
+    width: 120px;
+}
+
+.translation-btn-wr{
+    background-color: var(--primary-color);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2rem;
+
+}
+
+.translation-btn-wr button{
+   height: 25px;
+   border: none;
+   background-color: var(--secondary-color);
+   border-radius: 20px;
+   padding: 15px;
+   line-height: 4px;
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+   
+}
+

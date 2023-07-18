@@ -4,6 +4,7 @@ import { useUser } from '../context/UserContext'
 import Translation from "../components/Translator/Translation"
 import { loginUser } from "../api/user"
 import  { translationAdd } from "../api/translation"
+import {HiOutlineArrowCircleRight} from 'react-icons/hi'
 import { STORAGE_KEY_USER } from "../const/storageKeys";
 import { storageSave } from "../utils/storage";
 
@@ -54,18 +55,26 @@ const Translator = () =>{
 
     return (
         <>
-        <form>
-            <fieldset>
-                <input
-                    type="text"
-                    onChange={handleInputChange}
-                    value={userInput}
-                ></input>
-            </fieldset>
-            <button type="submit" onClick={handleTranslateClick}>Translate</button>
-
-        </form>
-        {btnClicked && <Translation userInput = {inputList} />}
+            <section className="translation-wr">
+                <form>
+                    <fieldset>
+                        <input
+                            type="text"
+                            onChange={handleInputChange}
+                            value={userInput}
+                        ></input>
+                        <button type="submit" onClick={handleTranslateClick}><HiOutlineArrowCircleRight size={52} color={"#8a60ff"} /></button>
+                    </fieldset>
+                </form>
+                <div className="translation-image-wr">
+                    <div className="translation-btn-wr">
+                        <button>Translation</button>
+                    </div>
+                    <div className="img-wr">
+                        {btnClicked && <Translation userInput={inputList} />}
+                    </div>
+                </div>
+            </section>
         </>
     )
 }

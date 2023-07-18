@@ -7,7 +7,7 @@ const Login = () =>{
     return (
       <section className="loginPage">
         <div className="icon-wr wr">
-          <img src={require("../components/images/sign-language.png")}></img>
+          <img src="/img/sign-language.png"></img>
         </div>
         <div className="wr">
           <div className="login-wr">
