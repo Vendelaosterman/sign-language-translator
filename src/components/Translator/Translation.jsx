@@ -10,9 +10,7 @@ const Translation = (props) => {
 
         return(
             <>
-            <div>
-            {displayImages}
-            </div>
+                {displayImages}
             </>
         )
 }

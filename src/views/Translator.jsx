@@ -4,6 +4,7 @@ import { useUser } from '../context/UserContext'
 import Translation from "../components/Translator/Translation"
 import { loginUser } from "../api/user"
 import  { translationAdd } from "../api/translation"
+import {HiOutlineArrowCircleRight} from 'react-icons/hi'
 
 const Translator = () =>{
 
@@ -46,18 +47,27 @@ const Translator = () =>{
 
     return (
         <>
-        <form>
-            <fieldset>
-                <input
-                    type="text"
-                    onChange={handleInputChange}
-                    value={userInput}
-                ></input>
-            </fieldset>
-            <button type="submit" onClick={handleButtonClick}>Translate</button>
+            <section className="translation-wr">
+                <form>
+                    <fieldset>
+                        <input
+                            type="text"
+                            onChange={handleInputChange}
+                            value={userInput}
+                        ></input>
+                        <button type="submit" onClick={handleButtonClick}><HiOutlineArrowCircleRight size={52} color={"#8a60ff"} /></button>
+                    </fieldset>
 
-        </form>
-        {btnClicked && <Translation userInput = {inputList} />}
+                </form>
+                <div className="translation-image-wr">
+                    <div className="translation-btn-wr">
+                        <button>Translation</button>
+                    </div>
+                    <div className="img-wr">
+                        {btnClicked && <Translation userInput={inputList} />}
+                    </div>
+                </div>
+            </section>
         </>
     )
 }

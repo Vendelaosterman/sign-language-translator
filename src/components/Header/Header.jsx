@@ -7,8 +7,8 @@ const Header = () =>{
 
     return (
         <>
-            <header className={(currentPath === "/") ? "login-header" : null}>
-                <p class="slogan">Lost in translation</p>
+            <header className={(currentPath === "/") ? "login-header" : "default-header"}>
+                {(currentPath === "/") ? <p className="slogan">Lost in translation</p> : <></>}
                 <Navbar />
             </header>
         </>
