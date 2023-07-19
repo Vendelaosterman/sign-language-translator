@@ -12,7 +12,6 @@ export const storageSave = (key, value) => {
 export const storageRead = key => {
     const data = sessionStorage.getItem(key)
     if(data) {
-        console.log("test")
         return JSON.parse(data)
     }
 

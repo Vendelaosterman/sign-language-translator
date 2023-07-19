@@ -32,13 +32,6 @@ const Translator = () =>{
     }
 
     const addTranslationToHistory = async() => {
-
-        // fetch existing history 
-        //const [userError, userResponse] = await loginUser(user.username)
-
-        // let totalHistory = userResponse.translations; 
-        // totalHistory.push(userInput);
-
         // add new translation 
         const [error, updatedUser] = await translationAdd(user, userInput)
         if (error !== null) {
@@ -49,8 +42,6 @@ const Translator = () =>{
         storageSave(STORAGE_KEY_USER, updatedUser)
         // Update context
         setUser(updatedUser)
-
-        console.log(updatedUser)
     }
 
     return (

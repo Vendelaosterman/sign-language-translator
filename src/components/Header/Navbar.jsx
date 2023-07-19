@@ -17,7 +17,7 @@ const Navbar = () => {
         <NavLink to="/translator"><p className="default-slogan">Lost in translation</p></NavLink>
         </div>
         <div className="nav-user-wr">
-            <div class="name-wr">
+            <div className="name-wr">
                 <p>Welcome {user.username}!</p>
             </div>
             <NavLink to="/profile"><CgProfile size={40} style={{color: '#ffc760'}}/></NavLink>
