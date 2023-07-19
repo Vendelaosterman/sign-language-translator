@@ -30,7 +30,7 @@ const Translator = () =>{
 
         addTranslationToHistory()
     }
-
+    
     const addTranslationToHistory = async() => {
 
         // fetch existing history 

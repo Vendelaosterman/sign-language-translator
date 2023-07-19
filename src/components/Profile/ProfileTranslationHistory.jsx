@@ -9,6 +9,7 @@ const ProfileTranslationHistory = ({ translations }) => {
     return (
         <section className="translation-history">
             <h2>Your Translation History</h2>
+            {translationList.length === 0 && <p>You have no translations yet.</p>}
             <ul>{ translationList }</ul>
         </section>
     )
