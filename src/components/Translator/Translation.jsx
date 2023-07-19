@@ -1,21 +1,34 @@
 import { useLocation } from "react-router-dom";
+import { useState} from 'react';
 
 const Translation = (props) => {
-        const receivedValue = props.userInput
 
-        // const currentPath = useLocation().pathname
-        // {(currentPath === "/profile") && <p>{receivedValue}</p>}
+    const receivedValue = props.userInput
 
-        const displayImages = receivedValue.map((value, index) => {
-            value = value.toLowerCase()
-            return <img key={index} src={`/img/${value}.png`}></img>
-        })
+    const generateAlphabet = () => {
+        const alphabet = [];
+        for (let i = 97; i <= 122; i++) {
+          alphabet.push(String.fromCharCode(i));
+        }
+        return alphabet;
+      };
 
-        return(
-            <>
-                {displayImages}
-            </>
-        )
+    const alphabet = generateAlphabet();
+
+    const displayImages = receivedValue.map((value, index) => {
+        value = value.toLowerCase()
+        return alphabet.includes(value) ? <img
+            key={index}
+            src={`/img/${value}.png`}
+        /> : null
+    })
+
+
+    return (
+        <>
+            {displayImages}
+        </>
+    )
 }
 
 export default Translation
