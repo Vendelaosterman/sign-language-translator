@@ -1,5 +1,5 @@
 
-import DisplayImages from '../SharedComponents/DisplayImages';
+import ImageItem from '../SharedComponents/ImageItem';
 
 const ProfileTranslationHistoryItem = ({ translation }) => {
 
@@ -9,7 +9,7 @@ const ProfileTranslationHistoryItem = ({ translation }) => {
                 <div className="translation-input-wr">
                     <p>{translation}</p>
                 </div>
-                {DisplayImages(translation)}
+                {ImageItem(translation)}
             </div>
         </>
     )

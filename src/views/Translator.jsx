@@ -8,6 +8,7 @@ import {HiOutlineArrowCircleRight} from 'react-icons/hi'
 import { STORAGE_KEY_USER } from "../const/storageKeys";
 import { storageSave } from "../utils/storage";
 import TranslationForm from "../components/Translator/TranslationForm";
+import ImageItem from "../components/SharedComponents/ImageItem";
 
 const Translator = () =>{
 
@@ -63,22 +64,17 @@ const Translator = () =>{
     const handleTranslateClicked = (e) => {
         e.preventDefault()
         setFormInput(e.target.value)
-    
         setBtnClicked(true)
-        let letters = formInput.split('')
-        setInputList(letters)
-
         setNewInput(formInput)
 
-        console.log(formInput);
-
+        
         addTranslationToHistory()
     }
 
     return (
         <>
             <section className="translation-wr">
-            <TranslationForm inputValue={formInput} inputChange={handleInputChange} translateClick={handleTranslateClicked}/>
+            <TranslationForm inputChange={handleInputChange} translateClick={handleTranslateClicked}/>
                 {/* <form>
                     <fieldset>
                         <input
@@ -94,7 +90,8 @@ const Translator = () =>{
                         <button>Translation</button>
                     </div>
                     <div className="img-wr">
-                        {btnClicked && <Translation userInput={newInput} />}
+                    {btnClicked && ImageItem(newInput)}
+                        {/* {btnClicked && <Translation userInput={newInput} />} */}
                     </div>
                 </div>
             </section>

@@ -1,5 +1,5 @@
 
-const DisplayImages = (translation) => {
+const ImageItem = (translation) => {
 
     const generateAlphabet = () => {
         const alphabet = [];
@@ -23,4 +23,4 @@ const DisplayImages = (translation) => {
     )
 }
 
-export default DisplayImages
+export default ImageItem

@@ -1,6 +1,7 @@
-import { useLocation } from "react-router-dom";
+/*import { useLocation } from "react-router-dom";
 import { useState} from 'react';
-import DisplayImages from '../SharedComponents/DisplayImages';
+import DisplayImages from '../SharedComponents/ImageItem';
+import ImageItem from "../SharedComponents/ImageItem";
 
 const Translation = (props) => {
 
@@ -8,9 +9,9 @@ const Translation = (props) => {
 
     return (
         <>
-            {DisplayImages(receivedValue)}
+            {ImageItem(receivedValue)}
         </>
     )
 }
 
-export default Translation
+export default Translation*/
