@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { HiOutlineArrowCircleRight } from "react-icons/hi"
 
 const TranslationForm = (props) => {

@@ -58,7 +58,7 @@ const LoginForm = () => {
     return(
         <>
             <p>Username</p>
-            <form class="loginForm" onSubmit={ handleSubmit(onSubmit) }>
+            <form className="loginForm" onSubmit={ handleSubmit(onSubmit) }>
                 <fieldset>
                     <input 
                     type="text"
