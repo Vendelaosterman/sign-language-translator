@@ -12,6 +12,7 @@ import TranslationForm from "../components/Translator/TranslationForm";
 const Translator = () =>{
 
     const [formInput, setFormInput] = useState("")
+    const [newInput, setNewInput] = useState("")
     const [inputList, setInputList] = useState("")
     const [btnClicked, setBtnClicked] = useState(false)
     const { user, setUser } = useUser()
@@ -62,11 +63,14 @@ const Translator = () =>{
     const handleTranslateClicked = (e) => {
         e.preventDefault()
         setFormInput(e.target.value)
-
+    
         setBtnClicked(true)
-        console.log(formInput)
         let letters = formInput.split('')
         setInputList(letters)
+
+        setNewInput(formInput)
+
+        console.log(formInput);
 
         addTranslationToHistory()
     }
@@ -74,7 +78,7 @@ const Translator = () =>{
     return (
         <>
             <section className="translation-wr">
-            <TranslationForm inputValue={setFormInput} inputChange={handleInputChange} translateClick={handleTranslateClicked}/>
+            <TranslationForm inputValue={formInput} inputChange={handleInputChange} translateClick={handleTranslateClicked}/>
                 {/* <form>
                     <fieldset>
                         <input
@@ -90,7 +94,7 @@ const Translator = () =>{
                         <button>Translation</button>
                     </div>
                     <div className="img-wr">
-                        {btnClicked && <Translation userInput={inputList} />}
+                        {btnClicked && <Translation userInput={newInput} />}
                     </div>
                 </div>
             </section>

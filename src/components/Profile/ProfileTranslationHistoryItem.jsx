@@ -1,21 +1,18 @@
 
+import DisplayImages from '../SharedComponents/DisplayImages';
+
 const ProfileTranslationHistoryItem = ({ translation }) => {
 
-
-        
-
-        const displayImages = translation.replace(/ /g,'').split('').map((value, index) => {
-            return <img key={index} src={`/img/${value}.png`}></img>
-        })
-
-        return(
-            <>
-            <li>
-            <p>{translation}</p>
-            {displayImages}
-            </li>
-            </>
-        )
+    return (
+        <>
+            <div className="translation-history">
+                <div className="translation-input-wr">
+                    <p>{translation}</p>
+                </div>
+                {DisplayImages(translation)}
+            </div>
+        </>
+    )
 }
 
 export default ProfileTranslationHistoryItem
