@@ -11,6 +11,8 @@ const Profile = () => {
 
     const { user, setUser } = useUser()
 
+    document.body.style = "background: white";
+
     useEffect(() => {
         const findUser = async () => {
             const [ error, latestUser ] = await userById(user.id)
@@ -26,8 +28,11 @@ const Profile = () => {
 
     return (
         <div className="profile">
+            <section className="translation-history-title">
+            <h2>Your Translation History</h2>
+            </section>
+        <ProfileActions/>
             <ProfileTranslationHistory translations={ user.translations }/>
-            <ProfileActions/>
         </div>
     )
 }
