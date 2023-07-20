@@ -1,4 +1,3 @@
-
 const ImageItem = (translation) => {
 
     const generateAlphabet = () => {
@@ -14,7 +13,6 @@ const ImageItem = (translation) => {
     const imageItem = translation.replace(/ /g, '').split('').map((value, index) => {
         return alphabet.includes(value) ? <img key={index} src={`/img/${value}.png`}></img> : null
     })
-
 
     return (
         <>
