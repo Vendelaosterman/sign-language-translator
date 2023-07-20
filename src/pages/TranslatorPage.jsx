@@ -5,10 +5,10 @@ import  { translationAdd } from "../api/translation"
 import { STORAGE_KEY_USER } from "../const/storageKeys";
 import { storageSave } from "../utils/storage";
 import TranslationForm from "../components/Translator/TranslationForm";
-import TranslationOutput from "../components/Translator/TranslationOutput";
 import ImageItem from "../components/SharedComponents/ImageItem";
+import TranslationOutput from "../components/Translator/TranslationOutput"
 
-const Translator = () =>{
+const TranslatorPage = () =>{
 
     const [formInput, setFormInput] = useState("")
     const [newInput, setNewInput] = useState("")
@@ -21,8 +21,8 @@ const Translator = () =>{
         setFormInput(e.target.value)
     }
 
-
     const addTranslationToHistory = async() => {
+
         const [error, updatedUser] = await translationAdd(user, formInput)
         if (error !== null) {
             return
@@ -30,22 +30,28 @@ const Translator = () =>{
 
         // Keep UI state and Server state in sync
         storageSave(STORAGE_KEY_USER, updatedUser)
+
         // Update context
         setUser(updatedUser)
     }
 
+
+
+
     // Event handler to bind to input from TranslationForm
+
     const handleTranslateClicked = (e) => {
-        e.preventDefault()
-        setFormInput(e.target.value)
-        setBtnClicked(true)
-        setNewInput(formInput)
-        
-        addTranslationToHistory()
-    }
+      e.preventDefault();
+      setFormInput(e.target.value);
+      setBtnClicked(true);
+      setNewInput(formInput);
+      addTranslationToHistory();
+
+    };
 
 
     return (
+
         <>
             <section className="translation-wr">
             <TranslationForm inputChange={handleInputChange} translateClick={handleTranslateClicked}/>
@@ -61,6 +67,11 @@ const Translator = () =>{
             </section>
         </>
     )
+
 }
 
-export default withAuth(Translator)
+
+
+
+
+export default withAuth(TranslatorPage)

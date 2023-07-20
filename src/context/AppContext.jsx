@@ -2,9 +2,11 @@ import UserProvider from "./UserContext"
 
 const AppContext = ({ children }) => {
     return (
-        <UserProvider>
-            { children }
-        </UserProvider>
+        <>
+            <UserProvider>
+                { children }
+            </UserProvider>
+        </>
     )
 }
 

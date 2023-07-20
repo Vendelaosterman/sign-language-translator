@@ -1,7 +1,6 @@
 import { HiOutlineArrowCircleRight } from "react-icons/hi"
 
 const TranslationForm = (props) => {
-
     return (
         <form>
             <fieldset>

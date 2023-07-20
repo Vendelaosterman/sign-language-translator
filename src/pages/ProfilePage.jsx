@@ -4,10 +4,10 @@ import withAuth from "../hoc/withAuth"
 import { useUser } from "../context/UserContext"
 import { useEffect } from "react"
 import { userById } from "../api/user"
-import { storageSave } from "../utils/storage"
+import { storageDelete, storageSave } from "../utils/storage"
 import { STORAGE_KEY_USER } from "../const/storageKeys"
 
-const Profile = () => {
+const ProfilePage = () => {
 
     const { user, setUser } = useUser()
 
@@ -37,4 +37,4 @@ const Profile = () => {
     )
 }
 
-export default withAuth(Profile)
+export default withAuth(ProfilePage)

@@ -5,9 +5,9 @@ import {
   Route
 } from 'react-router-dom'
 
-import Login from './views/Login'
-import Profile from './views/Profile'
-import Translator from './views/Translator'
+import LoginPage from './pages/LoginPage'
+import ProfilePage from './pages/ProfilePage'
+import TranslatorPage from './pages/TranslatorPage'
 import Header from './components/Header/Header';
 
 function App() {
@@ -17,9 +17,9 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={ <Login/>} />
-        <Route path="/profile" element={ <Profile/>} />
-        <Route path="/translator" element={ <Translator/>} />
+        <Route path="/" element={ <LoginPage/>} />
+        <Route path="/profile" element={ <ProfilePage/>} />
+        <Route path="/translator" element={ <TranslatorPage/>} />
       </Routes>
     </div>
     </BrowserRouter>
