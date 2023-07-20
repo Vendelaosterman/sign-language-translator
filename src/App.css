@@ -357,8 +357,18 @@ ul.profile-actions {
    line-height: 4px;
    color: white;
    font-family: 'Montserrat', sans-serif;
+   cursor: default;
    
-} /*--- Media queries ---- */
+} 
+
+.profile-actions .inactive-btn{
+    color: gray;
+    border-bottom: 2px solid gray;
+}
+
+
+
+/*--- Media queries ---- */
 
 @media only screen and (max-width: 2225px) {
   .icon-wr img {

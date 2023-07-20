@@ -35,8 +35,8 @@ const ProfileActions = () => {
 
     return (
         <ul className="profile-actions">
-            <li><button onClick={ handleClearHistoryClick }>Clear History</button></li>
-            <li><button onClick={ handleLogoutClick }>Logout</button></li>
+            {user.translations.length !== 0 ? <li><button onClick={ handleClearHistoryClick }>Clear History</button></li> : <li><button className="inactive-btn">Clear History</button></li> }
+            <li><button onClick={ handleLogoutClick } >Logout</button></li>
         </ul>
     )
 }
