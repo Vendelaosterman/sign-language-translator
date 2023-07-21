@@ -25,9 +25,9 @@ npm install react-icons --save
 ```
 ### External storage:
 
-To be able to save and fetch data from an external API you can follow the directions in [this API](https://gitlab.com/noroff-accelerate/javascript/projects/noroff-api/)
+To be able to save and fetch data from an external API you can follow the directions in [this API](https://gitlab.com/noroff-accelerate/javascript/projects/noroff-api/).
 
-You then create two constants (REACT_APP_API_KEY and REACT_APP_API_URL) using the retrieved API URL and API key:
+You then create two constants (REACT_APP_API_KEY and REACT_APP_API_URL) using the retrieved API URL and API key.
 
 
 ## Available Scripts
@@ -101,7 +101,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 @levenfalk  
 @VendelaOsterman  
-@warren-west
+@warren-west 
 @deanvons
 
 ## License
