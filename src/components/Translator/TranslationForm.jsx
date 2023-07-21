@@ -8,6 +8,7 @@ const TranslationForm = (props) => {
                     type="text"
                     onChange={props.inputChange}
                     value={props.inputValue}
+                    maxLength={40}
                 ></input>
                 <button type="submit" onClick={props.translateClick}><HiOutlineArrowCircleRight size={52} color={"#8a60ff"} /></button>
             </fieldset>
