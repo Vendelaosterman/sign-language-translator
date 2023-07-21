@@ -10,7 +10,7 @@ import TranslationOutput from "../components/Translator/TranslationOutput"
 const TranslatorPage = () =>{
 
     const [formInput, setFormInput] = useState("")
-    const [newInput, setNewInput] = useState("")
+    const [input, setInput] = useState("")
     const [btnClicked, setBtnClicked] = useState(false)
     const { user, setUser } = useUser()
 
@@ -40,7 +40,7 @@ const TranslatorPage = () =>{
       e.preventDefault();
       setFormInput(e.target.value);
       setBtnClicked(true);
-      setNewInput(formInput);
+      setInput(formInput);
       addTranslationToHistory();
 
     };
@@ -49,7 +49,7 @@ const TranslatorPage = () =>{
         <>
             <section className="translation-wr">
             <TranslationForm inputChange={handleInputChange} translateClick={handleTranslateClicked}/>
-            <TranslationOutput btnClicked={btnClicked} phrase={newInput}/>
+            <TranslationOutput btnClicked={btnClicked} phrase={input}/>
             </section>
         </>
     )
