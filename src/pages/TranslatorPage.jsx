@@ -5,7 +5,6 @@ import  { translationAdd } from "../api/translation"
 import { STORAGE_KEY_USER } from "../const/storageKeys";
 import { storageSave } from "../utils/storage";
 import TranslationForm from "../components/Translator/TranslationForm";
-import ImageItem from "../components/SharedComponents/ImageItem";
 import TranslationOutput from "../components/Translator/TranslationOutput"
 
 const TranslatorPage = () =>{
@@ -35,9 +34,6 @@ const TranslatorPage = () =>{
         setUser(updatedUser)
     }
 
-
-
-
     // Event handler to bind to input from TranslationForm
 
     const handleTranslateClicked = (e) => {
@@ -49,21 +45,11 @@ const TranslatorPage = () =>{
 
     };
 
-
     return (
-
         <>
             <section className="translation-wr">
             <TranslationForm inputChange={handleInputChange} translateClick={handleTranslateClicked}/>
-                {/* <div className="translation-image-wr">
-                    <div className="translation-btn-wr">
-                        <button>Translation</button>
-                    </div>
-                    <div className="img-wr">
-                    {btnClicked && ImageItem(newInput)}
-                    </div>
-                </div> */}
-                <TranslationOutput btnClicked={btnClicked} phrase={newInput}/>
+            <TranslationOutput btnClicked={btnClicked} phrase={newInput}/>
             </section>
         </>
     )

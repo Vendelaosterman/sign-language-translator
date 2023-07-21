@@ -2,8 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
 
-The application is a Single Page Application which works as a sign language translator that translates written language into the american sign language.  
-To use you have to setup a login profile by username and then be directed to 
+The application is a Single Page Application which works as a sign language translator that translates written language into the american sign language. To use you have to setup a login profile by username and then you will be directed to the translator. On the translator page you type in a word in the input form and the letters will be displayed as sign language. On your profile page you can find your latest word translations as well as clear history and logout buttons.
 
 ## Sign language Images
 Icons made by [Freepik](https://www.freepik.com) from [www.flaticon.com] (https://www.flaticon.com/)
@@ -21,14 +20,15 @@ To install the required packages from NPM run the following commands in the proj
 ```bash
 npm install
 npm install react-hook-form
+npm install react-router-dom
+npm install react-icons --save
 ```
-### To be able to fetch data from an external API you have to install following:
-Download git by steps:  
-1. Install [Git](https://git-scm.com/) 
-2. Install [NodeJS LTS](https://nodejs.org/en/) with npm **(It must be the LTS version.)**
-3. Create a [Railway](https://www.railway.app/) account (free 500 hours p/m)
+### External storage:
 
-Kankse bättre att bara länka till API beskrivning
+To be able to save and fetch data from an external API you have to follow the directions in [this API](https://gitlab.com/noroff-accelerate/javascript/projects/noroff-api/)
+
+You then create two constants (REACT_APP_API_KEY and REACT_APP_API_URL) using the retrieved API URL and API key:
+
 
 ## Available Scripts
 
