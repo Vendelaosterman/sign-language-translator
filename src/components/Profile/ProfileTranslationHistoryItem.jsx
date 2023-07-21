@@ -1,4 +1,3 @@
-
 import ImageItem from '../SharedComponents/ImageItem';
 
 const ProfileTranslationHistoryItem = ({ translation }) => {

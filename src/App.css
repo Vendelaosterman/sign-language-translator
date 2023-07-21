@@ -1,4 +1,3 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&display=swap');
 
 :root{
@@ -214,13 +213,6 @@ ul.profile-actions {
     border-bottom: 2px solid var(--secondary-color);
     font-family: 'Montserrat', sans-serif;
     font-size: large;
-
-
-    /*background-color: var(--primary-color);
-    height: 40px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: large;
-    border-radius: 10px;*/
 }
 
 .translation-history-title{
@@ -243,8 +235,6 @@ ul.profile-actions {
 .translation-history{
     width: 70%;
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.171);
-    /*border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;*/
     border-radius: 15px;
     padding-bottom: 1rem;
 }
@@ -264,11 +254,6 @@ ul.profile-actions {
 .translation-input-wr p{
     margin: 0;
 }
-
-/*section.translation-history{
-    display: flex;
-    justify-content: center;
-}*/
 
 /*---Translation page--- */
 

@@ -35,7 +35,6 @@ const TranslatorPage = () =>{
     }
 
     // Event handler to bind to input from TranslationForm
-
     const handleTranslateClicked = (e) => {
       e.preventDefault();
       setFormInput(e.target.value);
@@ -55,9 +54,5 @@ const TranslatorPage = () =>{
     )
 
 }
-
-
-
-
 
 export default withAuth(TranslatorPage)

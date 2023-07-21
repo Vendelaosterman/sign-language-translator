@@ -1,14 +1,11 @@
 import { NavLink, useLocation } from "react-router-dom"
 import { useUser } from "../../context/UserContext"
 import withAuth from "../../hoc/withAuth"
-import {TbHeartHandshake} from "react-icons/tb"
 import {CgProfile} from "react-icons/cg"
 
 const Navbar = () => {
 
     const { user } = useUser()
-
-    //const currentPath = useLocation().pathname
 
     return (
         <>
