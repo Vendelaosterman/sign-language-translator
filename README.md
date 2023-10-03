@@ -101,8 +101,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 @levenfalk  
 @VendelaOsterman  
-@warren-west 
-@deanvons
 
 ## License
 
